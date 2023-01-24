@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AddressService } from './address-form/address.service';
 import { AddressForm } from './address-form/angular-form';
 
 @Component({
@@ -7,10 +8,7 @@ import { AddressForm } from './address-form/angular-form';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  address = new AddressForm({
-    addressLine1: '',
-    city: '',
-    state: 'OH',
-    zip: '12345'
-  })
+  constructor(private readonly addressService: AddressService) {}
+
+  address = new AddressForm(this.addressService.address())
 }
