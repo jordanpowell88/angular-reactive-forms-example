@@ -19,6 +19,20 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
+    "paths": {
+      "ui-number-input": [
+        "dist/ui-number-input"
+      ],
+      "ui-select": [
+        "dist/ui-select"
+      ],
+      "ui-text-input": [
+        "dist/ui-text-input"
+      ],
+      "validation-messages": [
+        "dist/validation-messages"
+      ]
+    },
     "lib": [
       "ES2022",
       "dom"

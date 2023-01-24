@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AddressForm } from './address-form/angular-form';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-forms-example';
+  address = new AddressForm({
+    addressLine1: '',
+    city: '',
+    state: 'OH',
+    zip: '12345'
+  })
 }
