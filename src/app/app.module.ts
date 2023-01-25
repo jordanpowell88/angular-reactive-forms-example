@@ -8,11 +8,13 @@ import { UiSelectModule } from 'projects/ui-select/src/public-api';
 import { UiTextInputModule } from 'projects/ui-text-input/src/public-api';
 import { UiNumberInputModule } from 'projects/ui-number-input/src/public-api';
 import { CustomerComponent } from './customer/customer.component';
+import { AddressComponent } from './customer/address/address.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CustomerComponent
+    CustomerComponent,
+    AddressComponent
   ],
   imports: [
     BrowserModule,
