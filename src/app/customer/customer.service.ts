@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { faker } from '@faker-js/faker';
-import { AddressService } from './address-form/address.service';
+import { AddressService } from './address/address.service';
 import { Customer } from './customer';
 
 @Injectable({

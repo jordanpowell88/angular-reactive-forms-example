@@ -1,7 +1,7 @@
-import { Address } from "./address-form/address";
+import { Address } from "./address/address";
 
 export interface Customer {
     firstName: string;
     lastName: string;
-    address: Address
+    address: Address;
 }

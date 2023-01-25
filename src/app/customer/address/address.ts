@@ -60,8 +60,8 @@ export type USStates =
   | "WY";
 
 export interface Address {
-    addressLine1: string
-    city: string
-    state: USStates
+    addressLine1: string;
+    city: string;
+    state: USStates;
     zip: string
 }

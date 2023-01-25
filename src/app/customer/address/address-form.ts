@@ -1,26 +1,24 @@
-import { FormBuilder, FormControl, FormGroup, FormRecord, Validators } from "@angular/forms";
-import { Address, USStates } from "./address";
+import { FormBuilder, FormControl, FormGroup } from "@angular/forms"
+import { Address, USStates } from './address'
 
 export interface AddressFormGroup {
     addressLine1: FormControl<string | null>
     city: FormControl<string | null>
-    state: FormControl<USStates | null>
+    state: FormControl<string | null>
     zip: FormControl<string | null>
 }
 
 export class AddressForm extends FormGroup<AddressFormGroup> {
-    constructor(readonly model: Address, readonly fb: FormBuilder = new FormBuilder()) {
-        super(
-            fb.group<AddressFormGroup>({
-                addressLine1: new FormControl(model.addressLine1, Validators.required),
-                city: new FormControl(model.city),
-                state: new FormControl(model.state),
-                zip: new FormControl(model.zip)
-            }).controls
-        )
+    constructor(readonly model: Address, fb: FormBuilder = new FormBuilder()) {
+        super(fb.group({
+            addressLine1: new FormControl(model.addressLine1),
+            city: new FormControl(model.city),
+            state: new FormControl(model.state),
+            zip: new FormControl(model.zip)
+        }).controls)
     }
 
-    stateOptions: USStates[] = [
+    usStates: USStates[] = [
         "AL",
         "AK",
         "AS",
@@ -80,5 +78,5 @@ export class AddressForm extends FormGroup<AddressFormGroup> {
         "WV",
         "WI",
         "WY",
-    ];
+        ];
 }
