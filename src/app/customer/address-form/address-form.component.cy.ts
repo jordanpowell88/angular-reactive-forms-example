@@ -1,8 +1,8 @@
 import { AddressFormComponent } from "./address-form.component";
-import { AddressForm } from "./angular-form";
+import { AddressForm } from "./address-form";
 import { faker } from '@faker-js/faker'
 import { Address, USStates } from "./address";
-import { AppModule } from "../app.module";
+import { AppModule } from "../../app.module";
 
 const address: Address = {
     addressLine1: faker.address.streetAddress(),

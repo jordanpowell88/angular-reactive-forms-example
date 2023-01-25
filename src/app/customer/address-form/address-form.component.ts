@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { AddressForm } from './angular-form';
+import { AddressForm } from './address-form';
 
 @Component({
   selector: 'app-address-form',
