@@ -9,6 +9,7 @@ export class ErrorMessagesPipe implements PipeTransform {
     if (!errors) {
       return [];
     }
+
     return Object.keys(errors);
   }
 }

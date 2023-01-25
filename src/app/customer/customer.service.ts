@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { faker } from '@faker-js/faker';
-import { AddressService } from './address-form/address.service';
 import { Customer } from './customer';
 
 @Injectable({
@@ -11,9 +10,6 @@ export class CustomerService {
     return {
       firstName: faker.name.firstName(),
       lastName: faker.name.lastName(),
-      address: this.addressService.address()
     }
   }
-
-  constructor(private readonly addressService: AddressService) {}
 }

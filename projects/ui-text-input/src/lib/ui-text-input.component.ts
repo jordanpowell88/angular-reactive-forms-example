@@ -8,11 +8,12 @@ import { validationMessages } from 'projects/validation-messages/src/public-api'
     <mat-form-field *ngIf="control">
     <mat-label>{{ label }}</mat-label>
     <input type="text" matInput [formControl]="control" />
-    <ng-template *ngIf="control.errors">
+    <div *ngIf="control.errors">
+      {{ control.errors }}
       <mat-error *ngFor="let error of control.errors | errorKeys">
         {{ messages[error] }}
       </mat-error>
-    </ng-template>
+    </div>
   </mat-form-field>
   `,
   styles: [

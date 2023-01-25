@@ -6,6 +6,7 @@ import { MatInputModule } from "@angular/material/input";
 import { MatSelectModule } from "@angular/material/select";
 import { CommonModule } from '@angular/common';
 import { ValidationMessagesModules } from 'projects/validation-messages/src/public-api';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { ValidationMessagesModules } from 'projects/validation-messages/src/publ
   ],
   imports: [
     CommonModule,
+    BrowserAnimationsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,

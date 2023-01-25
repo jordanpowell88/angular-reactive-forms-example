@@ -12,11 +12,11 @@ import { validationMessages } from 'projects/validation-messages/src/public-api'
         {{ option }}
       </mat-option>
     </mat-select>
-    <ng-template *ngIf="control.errors">
+    <div *ngIf="control.errors">
       <mat-error *ngFor="let error of control.errors | errorKeys">
         {{ messages[error] }}
       </mat-error>
-    </ng-template>
+    </div>
 </mat-form-field>
   `,
   styles: [
